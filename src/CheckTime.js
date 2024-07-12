@@ -57,7 +57,7 @@ const CheckTimePage = () => {
                     <h1 className="text-6xl">🫡</h1>
                 </>
             )}
-            <div className="flex flex-col gap-2 sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4">
+            <div className="flex flex-col gap-2 justify-around sm:justify-start md:justify-start sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4">
                 <label htmlFor="time" className="text-2xl text-start">Time</label>
                 {timeInput ?
                     (
@@ -67,7 +67,7 @@ const CheckTimePage = () => {
                     )
                 }
                 <label htmlFor="range1" className="text-2xl text-start">Time Range</label>
-                <div className="flex gap-2 w-full justify-around items-center sm:justify-start md:justify-start ">
+                <div className="flex gap-2 w-full items-center">
                     {timeInput ?
                         (
                             <input className="p-2 w-full h-12 hover:shadow-xl rounded-lg border border-gray-700" type="time" onChange={e => setStartTime(e.target.value)} />
