@@ -45,8 +45,6 @@ const CheckTimePage = () => {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen gap-6">
-            <button className="p-2 bg-blue-500 text-white rounded-lg hover:bg-slate-400" onClick={() => setTimeInput(!timeInput)}>Change Input Type</button>
-
             {valid ? (
                 <>
                     <h1 className="text-6xl"> {time} {result ? "is in" : "is not in"} [{startTime}:{endTime})</h1>
@@ -62,29 +60,32 @@ const CheckTimePage = () => {
                 <label htmlFor="time" className="text-2xl text-start">Time</label>
                 {timeInput ?
                     (
-                        <input className="p-2 h-12  rounded-lg border border-gray-700" type="time" min={0} max={23} onChange={e => setTime(e.target.value)} />
+                        <input className="p-2 h-12 hover:shadow-xl rounded-lg border border-gray-700" type="time" onChange={e => setTime(e.target.value)} />
                     ) : (
-                        <input className="p-2 h-12  rounded-lg border border-gray-700" type="number" placeholder="input time between 0 and 23" min={0} max={23} onChange={e => setTime(e.target.value)} />
+                        <input className="p-2 h-12 hover:shadow-xl rounded-lg border border-gray-700" type="number" placeholder="input time between 0 and 23" min={0} max={23} onChange={e => setTime(e.target.value)} />
                     )
                 }
                 <label htmlFor="range1" className="text-2xl text-start">Time Range</label>
                 <div className="flex gap-2 w-full justify-between items-center">
                     {timeInput ?
                         (
-                            <input className="p-2 w-full h-12  rounded-lg border border-gray-700" type="time" min={0} max={23} onChange={e => setStartTime(e.target.value)} />
+                            <input className="p-2 w-full h-12 hover:shadow-xl rounded-lg border border-gray-700" type="time" onChange={e => setStartTime(e.target.value)} />
                         ) : (
-                            <input className="p-2 w-full h-12  rounded-lg border border-gray-700" type="number" placeholder="between 0 and 23" min={0} max={23} onChange={e => setStartTime(e.target.value)} />
+                            <input className="p-2 w-full h-12 hover:shadow-xl rounded-lg border border-gray-700" type="number" placeholder="between 0 and 23" min={0} max={23} onChange={e => setStartTime(e.target.value)} />
                         )
                     }
                     <span className=" ">-</span>
                     {timeInput ?
                         (
-                            <input className="p-2 w-full h-12  rounded-lg border border-gray-700" type="time" min={0} max={23} onChange={e => setEndTime(e.target.value)} />
+                            <input className="p-2 w-full h-12 hover:shadow-xl rounded-lg border border-gray-700" type="time" onChange={e => setEndTime(e.target.value)} />
                         ) : (
-                            <input className="p-2 w-full h-12  rounded-lg border border-gray-700" type="number" placeholder="between 0 and 23" min={0} max={23} onChange={e => setEndTime(e.target.value)} />
+                            <input className="p-2 w-full h-12 hover:shadow-xl rounded-lg border border-gray-700" type="number" placeholder="between 0 and 23" min={0} max={23} onChange={e => setEndTime(e.target.value)} />
                         )
                     }
                 </div>
+                <button className={`p-2 w-96 mt-5 ${timeInput ? 'bg-blue-400' : 'bg-green-500'} text-white rounded-lg hover:shadow-xl`} onClick={() => setTimeInput(!timeInput)}>
+                    {timeInput ? "🔢 Switch to Number Input" : "🕑 Switch to Time Input"}
+                </button>
             </div>
         </div>
     );
