@@ -2,20 +2,21 @@ import React, { useState, useEffect } from "react";
 
 const CheckTimePage = () => {
     const [valid, setValid] = useState(false);
-    const [result, setResult] = useState(false);
+    const [result, setResult] = useState(null);
     const [time, setTime] = useState("");
     const [startTime, setStartTime] = useState("");
     const [endTime, setEndTime] = useState("");
     const [timeInput, setTimeInput] = useState(true);
 
     useEffect(() => {
-        if (timeInput && time && startTime && endTime) {
+        if (timeInput && time.includes(":") && startTime.includes(":") && endTime.includes(":")) {
             const [hours, minutes] = time.split(":").map(Number);
             const parsedTime = hours + minutes / 60;
             const [startHours, startMinutes] = startTime.split(":").map(Number);
             const parsedStartTime = startHours + startMinutes / 60;
             const [endHours, endMinutes] = endTime.split(":").map(Number);
             const parsedEndTime = endHours + endMinutes / 60;
+            console.log(parsedTime, parsedStartTime, parsedEndTime);
             const isInRange = checkTime(parsedTime, parsedStartTime, parsedEndTime);
             setResult(isInRange);
         } else if (!timeInput && time !== "" && startTime !== "" && endTime !== "") {
@@ -53,7 +54,7 @@ const CheckTimePage = () => {
             ) : (
                 <>
                     <h1 className="text-6xl">Please enter a valid time between 0 and 23.</h1>
-                    <h1 className="text-6xl">{result ? "✅" : "❌"}</h1>
+                    <h1 className="text-6xl">🫡</h1>
                 </>
             )}
             <div className="flex flex-col gap-2 w-96">
