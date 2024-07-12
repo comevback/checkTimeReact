@@ -67,7 +67,7 @@ const CheckTimePage = () => {
                     )
                 }
                 <label htmlFor="range1" className="text-2xl text-start">Time Range</label>
-                <div className="flex gap-2 w-full justify-around items-center sm:items-start md:items-start">
+                <div className="flex gap-2 w-full justify-around items-center sm:justify-start md:justify-start ">
                     {timeInput ?
                         (
                             <input className="p-2 w-full h-12 hover:shadow-xl rounded-lg border border-gray-700" type="time" onChange={e => setStartTime(e.target.value)} />
