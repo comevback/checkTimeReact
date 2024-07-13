@@ -59,7 +59,7 @@ const CheckTimePage = () => {
                 </>
             ) : (
                 <>
-                    <h1 className="text-6xl">Please enter a valid time between 0 and 23.</h1>
+                    <h1 className="text-6xl text-center">Please enter a valid time between 0 and 23.</h1>
                     <h1 className="text-6xl">🫡</h1>
                 </>
             )}
