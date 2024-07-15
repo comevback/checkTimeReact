@@ -71,7 +71,7 @@ const WatchPage = (props) => {
     }, [props.time, props.startTime, props.endTime]);
 
     return (
-        <svg width={300} height={300}>
+        <svg viewBox="0 0 300 300" className="w-36 h-auto sm:w-80">
             <circle cx="150" cy="150" r="140" stroke="gray" strokeWidth="5" fill='none' />
             <line x1={coorTime.x1} y1={coorTime.y1} x2={coorTime.x2} y2={coorTime.y2} stroke="red" strokeWidth="12" />
             <line x1="150" y1="150" x2={coorStartTime.x2} y2={coorStartTime.y2} stroke="blue" strokeWidth="3" />
