@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 const WatchPage = (props) => {
-    const [coorTime, setCoorTime] = useState({ x1: 150, y1: 150, x2: 150, y2: 150 }); // 初始化线段终点的状态
-    const [coorStartTime, setCoorStartTime] = useState({ x2: 150, y2: 150 }); // 初始化线段终点的状态
-    const [coorEndTime, setCoorEndTime] = useState({ x2: 150, y2: 150 }); // 初始化线段终点的状态
+    const [coorTime, setCoorTime] = useState({ x1: 150, y1: 150, x2: 150, y2: 150 });
+    const [coorStartTime, setCoorStartTime] = useState({ x2: 150, y2: 150 });
+    const [coorEndTime, setCoorEndTime] = useState({ x2: 150, y2: 150 });
 
     // calculate the coordinates of the line end based on the time
     const calculateCoordinates = (time) => {
@@ -73,9 +73,9 @@ const WatchPage = (props) => {
     return (
         <svg viewBox="0 0 300 300" className="w-36 h-auto sm:w-80">
             <circle cx="150" cy="150" r="140" stroke="gray" strokeWidth="5" fill='none' />
-            <line x1={coorTime.x1} y1={coorTime.y1} x2={coorTime.x2} y2={coorTime.y2} stroke="red" strokeWidth="12" />
-            <line x1="150" y1="150" x2={coorStartTime.x2} y2={coorStartTime.y2} stroke="blue" strokeWidth="3" />
-            <line x1="150" y1="150" x2={coorEndTime.x2} y2={coorEndTime.y2} stroke="green" strokeWidth="3" />
+            <line x1={coorTime.x1} y1={coorTime.y1} x2={coorTime.x2} y2={coorTime.y2} stroke="lightgreen" strokeWidth="12" />
+            <line x1="150" y1="150" x2={coorStartTime.x2} y2={coorStartTime.y2} stroke="lightblue" strokeWidth="3" />
+            <line x1="150" y1="150" x2={coorEndTime.x2} y2={coorEndTime.y2} stroke="pink" strokeWidth="3" />
             <text x="150" y="35" textAnchor="middle" fontSize="24">0</text>
             <text x="275" y="155" textAnchor="middle" fontSize="24">6</text>
             <text x="150" y="280" textAnchor="middle" fontSize="24">12</text>

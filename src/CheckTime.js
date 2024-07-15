@@ -69,26 +69,26 @@ const CheckTimePage = () => {
                 <label htmlFor="time" className="text-2xl text-start">Time</label>
                 {timeInput ?
                     (
-                        <input className="p-2 h-12 text-3xl hover:shadow-xl rounded-lg border border-gray-700" type="time" onChange={e => setTime(e.target.value)} />
+                        <input className="p-2 h-12 text-green-500 text-3xl hover:shadow-xl rounded-lg border border-gray-700" type="time" onChange={e => setTime(e.target.value)} />
                     ) : (
-                        <input className="p-2 h-12 text-3xl hover:shadow-xl rounded-lg border border-gray-700" type="number" placeholder="input number between 0 and 23" min={0} max={23} onChange={e => setTime(e.target.value)} />
+                        <input className="p-2 h-12 text-green-500 text-3xl hover:shadow-xl rounded-lg border border-gray-700" type="number" placeholder="input number between 0 and 23" min={0} max={23} onChange={e => setTime(e.target.value)} />
                     )
                 }
                 <label htmlFor="range1" className="text-2xl text-start">Time Range</label>
                 <div className="flex gap-2 w-full items-center">
                     {timeInput ?
                         (
-                            <input className="p-2 w-full h-12 text-3xl hover:shadow-xl rounded-lg border border-gray-700" type="time" onChange={e => setStartTime(e.target.value)} />
+                            <input className="p-2 w-full h-12 text-blue-400 text-3xl hover:shadow-xl rounded-lg border border-gray-700" type="time" onChange={e => setStartTime(e.target.value)} />
                         ) : (
-                            <input className="p-2 w-full h-12 text-3xl hover:shadow-xl rounded-lg border border-gray-700" type="number" placeholder="0 ~ 23" min={0} max={23} onChange={e => setStartTime(e.target.value)} />
+                            <input className="p-2 w-full h-12 text-blue-400 text-3xl hover:shadow-xl rounded-lg border border-gray-700" type="number" placeholder="0 ~ 23" min={0} max={23} onChange={e => setStartTime(e.target.value)} />
                         )
                     }
                     <span>-</span>
                     {timeInput ?
                         (
-                            <input className="p-2 w-full h-12 text-3xl hover:shadow-xl rounded-lg border border-gray-700" type="time" onChange={e => setEndTime(e.target.value)} />
+                            <input className="p-2 w-full h-12 text-pink-300 text-3xl hover:shadow-xl rounded-lg border border-gray-700" type="time" onChange={e => setEndTime(e.target.value)} />
                         ) : (
-                            <input className="p-2 w-full h-12 text-3xl hover:shadow-xl rounded-lg border border-gray-700" type="number" placeholder="0 ~ 23" min={0} max={23} onChange={e => setEndTime(e.target.value)} />
+                            <input className="p-2 w-full h-12 text-pink-300 text-3xl hover:shadow-xl rounded-lg border border-gray-700" type="number" placeholder="0 ~ 23" min={0} max={23} onChange={e => setEndTime(e.target.value)} />
                         )
                     }
                 </div>
