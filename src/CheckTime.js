@@ -52,7 +52,7 @@ const CheckTimePage = () => {
     }
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen gap-6 my-4">
+        <div className="flex flex-col items-center justify-center min-h-screen gap-6 h-[100vh]">
             {valid ? (
                 <>
                     <h1 className="text-2xl text-center sm:text-6xl"> {time} {result ? "is in" : "is not in"} [{startTime} - {endTime})</h1>
