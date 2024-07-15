@@ -76,6 +76,10 @@ const WatchPage = (props) => {
             <line x1={coorTime.x1} y1={coorTime.y1} x2={coorTime.x2} y2={coorTime.y2} stroke="red" strokeWidth="12" />
             <line x1="150" y1="150" x2={coorStartTime.x2} y2={coorStartTime.y2} stroke="blue" strokeWidth="3" />
             <line x1="150" y1="150" x2={coorEndTime.x2} y2={coorEndTime.y2} stroke="green" strokeWidth="3" />
+            <text x="150" y="35" textAnchor="middle" fontSize="24">0</text>
+            <text x="275" y="155" textAnchor="middle" fontSize="24">6</text>
+            <text x="150" y="280" textAnchor="middle" fontSize="24">12</text>
+            <text x="30" y="155" textAnchor="middle" fontSize="24">18</text>
         </svg>
     );
 };
