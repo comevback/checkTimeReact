@@ -6,6 +6,7 @@ const WatchPage = (props) => {
     const [coorEndTime, setCoorEndTime] = useState({ x2: 150, y2: 150 });
 
     // calculate the coordinates of the line end based on the time
+    // 時間に基づいて線の終点の座標を計算する
     const calculateCoordinates = (time) => {
         const cx = 150;
         const cy = 150;
@@ -47,6 +48,7 @@ const WatchPage = (props) => {
     };
 
     // detect changes in time and update the coordinates
+    // 時間の変更を検出して座標を更新する
     useEffect(() => {
         if (props.time) {
             if (props.time < 0 || props.time > 23) {
