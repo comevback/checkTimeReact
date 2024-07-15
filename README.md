@@ -1,4 +1,4 @@
-# https://xuxiang-checktime.vercel.app
+# アプリ： https://xuxiang-checktime.vercel.app
 
 ## Getting Started with Create React App
 
