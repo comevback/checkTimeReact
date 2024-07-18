@@ -23,7 +23,7 @@ FROM nginx:alpine
 COPY --from=build /app/build /usr/share/nginx/html
 
 # 暴露端口
-EXPOSE 3000
+EXPOSE 80
 
 # 启动Nginx服务器
 CMD ["nginx", "-g", "daemon off;"]
